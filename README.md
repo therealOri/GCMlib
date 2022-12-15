@@ -1,7 +1,7 @@
 <h1 align="center">
 	<img src="https://user-images.githubusercontent.com/45724082/207946199-691bd4b7-d3f1-4187-8e54-32c6ce23503d.png">
   <br>
-    GCMlib - A minimalistic and simple AES GCM mode encryption library. For encrypting strings and files!
+    GCMlib - A minimalistic and simple encryption library. For encrypting data using AES GCM mode. 
 </h1>
 <p align="center">
     GCMlib allows you to encrypt and decrypt strings of text via AES in GCM mode with a password derived key. Your encrypted data/strings can only be decrypted using the aformentioned key. You can use this for a variety of things from securing passwords, encrypting HWIDs and files. Making AES encryption a little bit easier!
