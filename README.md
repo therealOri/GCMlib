@@ -13,9 +13,9 @@
 <br />
 
 # Updates
-What has been updated as of | 12/--/22:
+What has been updated as of | 12/15/22:
 
-> - Stuff
+> - Nothing yet, Just commited files and created this repo.
 
 <br />
 <br />
