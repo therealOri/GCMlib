@@ -46,7 +46,7 @@ The making of the "key" takes in a password (that you can make using [Genter](ht
 
 
 ```python
-from GCMlib import gcm
+import gcm
 
 
 ##---------Start---------##
