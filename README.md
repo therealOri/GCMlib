@@ -43,7 +43,9 @@ __ __
 It is important to know that all functions will take 2 values in BYTES. The data to encrypt and the key. Make sure the data passed to the functions are in that order. Data first then Key.
 
 The making of the "key" takes in a password (that you can make using [Genter](https://github.com/therealOri/Genter)). The key then gets used to encrypt your data.
+> I am aware of the typo/incorrect import useage in the pypi readme. It will be fixed next release. (if I make a next release)
 
+<br />
 
 ```python
 import gcm
