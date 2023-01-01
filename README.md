@@ -13,9 +13,9 @@
 <br />
 
 # Updates
-What has been updated as of | 12/15/22:
+What has been updated as of | 12/31/22:
 
-> - Nothing yet, Just commited files and created this repo.
+> - New KDF. Uisng Argon instead of scrypt.
 
 <br />
 <br />
