@@ -10,8 +10,8 @@ from Crypto.Random import random
 
 
 
-#KeyGen
-from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
+#KeyGen  |  kdf
+import argon2
 
 
 
@@ -36,17 +36,18 @@ def keygen(master):
     else:
         salt = os.urandom(16)
 
-        # derive
+        # derive | DO NOT MESS WITH...unless you know what you are doing and or have more than 8GB of ram to spare and a really good CPU.
         print("Generating key...")
         with alive_bar(0) as bar:
-            Scr = Scrypt(
+            key = argon2.hash_password_raw(
+                time_cost=16,
+                memory_cost=2**20,
+                parallelism=4,
+                hash_len=32,
+                password=master,
                 salt=salt,
-                length=32,
-                n=2**20,
-                r=16,
-                p=1,
+                type=argon2.Type.ID
             )
-            key = Scr.derive(master)
             bar()
         clear()
         return key #returns bytes. You will need to base64 encode them yourself if you want a "shareable key"
@@ -78,7 +79,8 @@ def stringD(b64_input, key):
         cipher.update(jv['header'])
         plaintext = cipher.decrypt_and_verify(jv['ciphertext'], jv['tag'])
         return plaintext.decode()
-    except (ValueError, KeyError):
+    except (ValueError, KeyError) as e:
+        print(f'Oops, an error has occured: "{e}".\n')
         input("Incorrect data given, or Data has been tampered with. Can't decrypt.\n\nPress 'enter' to continue...")
         clear()
         return None
