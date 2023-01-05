@@ -43,7 +43,6 @@ __ __
 It is important to know that all functions will take 2 values in BYTES. The data to encrypt and the key. Make sure the data passed to the functions are in that order. Data first then Key.
 
 The making of the "key" takes in a password (that you can make using [Genter](https://github.com/therealOri/Genter)). The key then gets used to encrypt your data.
-> I am aware of the typo/incorrect import useage in the pypi readme. It will be fixed next release. (if I make a next release)
 
 <br />
 
@@ -89,7 +88,6 @@ __ __
 
 # Disclaimer
 I am not liable or responsible for any data loss or destruction of any kind when using GCMlib. If you lose data and do not have backups then that is solely on you.
-> This disclaimer mainly comes from me noticing that if what you are trying to decrypt is to large, it will just error. Idk what causes this or why as encrypting would work just fine.. So remember to be careful of what you encrypt and make sure to have plenty of backups.
 __ __
 
 
