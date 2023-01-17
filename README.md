@@ -63,7 +63,7 @@ save_me = base64.b64encode(eKey) #for saving eKey to decrypt later.
 input(f'Save this key so you can decrypt later: {save_me}\n\nPress "enter" to contine...')
 gcm.clear() #clears terminal or cmd/powershell window.
 
-data_enc = gcm.stringE(data=data, key=eKey)
+data_enc = gcm.stringE(enc_data=data, key=eKey)
 gcm.clear()
 print(data_enc) # Output is b64 encoded. --> eyJub25jZSI6ICJjQjhpWmc0MWhDWXBRVXdVdW53Q0pRPT0iLCAiaGVhZGVyIjogIlJXNWpjbmx3ZEdWa0lIVnphVzVuSUVkRFRXeHBZaTRnUkU4Z1RrOVVJRlJCVFZCRlVpQlhTVlJJTGlBZ2ZDQWdUV0ZrWlNCaWVTQjBhR1Z5WldGc1QzSnBJQ0I4SUNCaUoxeDRNVE5jZUdKaFhIaGpaVng0TVdWY2VHRTRYSGhsT1VOY2VHRmxKdz09IiwgImNpcGhlcnRleHQiOiAiZ2FDSjY4N2FGVjNMMEIyb01Ecz0iLCAidGFnIjogIkJBUjlmVzkzaWFESnUwckpSU2o3VEE9PSJ9
 
@@ -74,7 +74,7 @@ data = 'eyJub25jZSI6ICJjQjhpWmc0MWhDWXBRVXdVdW53Q0pRPT0iLCAiaGVhZGVyIjogIlJXNWpj
 b64_enc_key = input("base64 encoded bytes/key made with keygen(): ")
 dKey = base64.b64decode(b64_enc_key)
 
-str_dcr = gcm.stringD(b64_input=data, key=dKey)
+str_dcr = gcm.stringD(dcr_data=data, key=dKey)
 gcm.clear()
 print(str_dcr) # Output is "Hello World <3"
 
