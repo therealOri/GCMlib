@@ -13,9 +13,10 @@
 <br />
 
 # Updates
-What has been updated as of | 12/31/22:
+What has been updated as of | 01/17/23:
 
-> - New KDF. Uisng Argon instead of scrypt.
+> - Functions now take "keyword arguments" and `gcm.py` will enforce the "keyword arguments".
+
 
 <br />
 <br />
