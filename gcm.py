@@ -55,7 +55,7 @@ def keygen(master):
 
 
 # Encrypting the passwords with master key and AES encryption.
-def stringE(data, key):
+def stringE(*, data, key):
     cipher = AES.new(key, AES.MODE_GCM)
     cipher.update(header)
     ciphertext, tag = cipher.encrypt_and_digest(data)
@@ -68,7 +68,7 @@ def stringE(data, key):
 
 
 #Decrypting the passwords/data with master key. passwords/data will base64 encoded.
-def stringD(b64_input, key):
+def stringD(*, b64_input, key):
     try:
         json_input = b64.b64decode(b64_input)
         b64j = json.loads(json_input)
