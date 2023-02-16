@@ -10,7 +10,7 @@ setuptools.setup(
     license="GPL-3.0",
     install_requires=[
         "alive-progress==2.4.1",
-        "pycryptodome==3.16.0",
+        "pycryptodome==3.17.0",
         "argon2-cffi==21.3.0"
     ],
     author_email="therealOri@duck.com",
