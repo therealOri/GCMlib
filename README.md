@@ -76,7 +76,7 @@ dKey = base64.b64decode(b64_enc_key)
 
 str_dcr = gcm.stringD(dcr_data=data, key=dKey)
 gcm.clear()
-print(str_dcr) # Output is "Hello World <3"
+print(str_dcr.decode('utf-8') # Output is "Hello World <3"
 
 ##---------End---------##
 ```
