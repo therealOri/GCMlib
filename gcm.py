@@ -67,7 +67,7 @@ def stringE(*, enc_data, key):
     return b64_result.decode()
 
 
-#Decrypting the passwords/data with master key. passwords/data will base64 encoded.
+#Decrypting the passwords/data with master key.
 def stringD(*, dcr_data, key):
     try:
         json_input = b64.b64decode(dcr_data)
@@ -78,7 +78,7 @@ def stringD(*, dcr_data, key):
         cipher = AES.new(key, AES.MODE_GCM, nonce=jv['nonce'])
         cipher.update(jv['header'])
         plaintext = cipher.decrypt_and_verify(jv['ciphertext'], jv['tag'])
-        return plaintext.decode()
+        return plaintext
     except (ValueError, KeyError) as e:
         print(f'Oops, an error has occured: "{e}".\n')
         input("Incorrect data given, or Data has been tampered with. Can't decrypt.\n\nPress 'enter' to continue...")
