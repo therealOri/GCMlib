@@ -13,9 +13,9 @@
 <br />
 
 # Updates
-What has been updated as of | 01/17/23:
+What has been updated as of | 05/01/23:
 
-> - Functions now take "keyword arguments" and `gcm.py` will enforce the "keyword arguments".
+> - Made dependencies use latest versions.
 
 
 <br />
